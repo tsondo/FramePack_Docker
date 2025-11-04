@@ -39,7 +39,15 @@ This means you can rebuild or update the container at any time without losing yo
 ## 🚀 How to run
 
 See the [README.md](README.md) for full setup instructions.  
-In short: run the provided `setup.sh` script, then open your browser to:
+In short:
+
+    git clone https://github.com/tsondo/FramePack_Docker.git
+    cd FramePack_Docker
+    cp .env.template .env   # edit .env to set your paths and options
+    bash setup.sh
+    docker compose up
+
+Then open your browser to:
 
 http://localhost:7860
 
@@ -68,5 +76,6 @@ If you’re running Docker Desktop on Windows:
 
 - Docker runs FramePack in a clean, reproducible environment.
 - Your models and outputs are **persistent** on your host.
+- Copy `.env.template` to `.env` and edit it before first run.
 - Access the UI at http://localhost:7860.
 - For full details, see the main [README.md](README.md).

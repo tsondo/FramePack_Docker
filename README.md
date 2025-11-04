@@ -16,6 +16,7 @@ For setup help, see GETTING_STARTED.md and HOWTO.md.
 
     git clone https://github.com/tsondo/FramePack_Docker.git
     cd FramePack_Docker
+    cp .env.template .env   # edit .env to set your paths and options
     bash setup.sh
     docker compose up
 

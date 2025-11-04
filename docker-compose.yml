@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   framepack:
     build:
@@ -15,23 +17,22 @@ services:
       - hf_models:/app/hf_download
       - ./outputs:/app/outputs
       - ./models:/app/models
+      # 👇 Mount WSL CUDA driver stubs so -lcuda can be found
+      - /usr/lib/wsl/lib:/usr/lib/wsl/lib:ro
     environment:
       - UID=${UID}
       - GID=${GID}
       - HF_HOME=/app/hf_download
       - CLI_ARGS=--share --server 0.0.0.0
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - LD_LIBRARY_PATH=/usr/lib/wsl/lib:${LD_LIBRARY_PATH}
     env_file:
       - .env
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
     restart: unless-stopped
     stdin_open: true
     tty: true
+    gpus: all   # 👈 Compose v2 GPU passthrough
 
 volumes:
   hf_models:

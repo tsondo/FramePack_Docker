@@ -47,3 +47,10 @@ This project does not add new features to FramePack. It simply provides a clean,
 
 - [GETTING_STARTED.md](GETTING_STARTED.md) — plain‑language intro for Docker/FramePack beginners
 - [HOWTO.md](HOWTO.md) — step‑by‑step WSL + Docker + NVIDIA setup guide
+
+---
+
+## 🙏 Credits
+
+This Docker setup builds on the upstream [FramePack project](https://github.com/lllyasviel/FramePack) by [lllyasviel](https://github.com/lllyasviel).  
+All credit for FramePack itself goes to the original authors — this repository only provides a containerized environment for easier deployment.

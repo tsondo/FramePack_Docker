@@ -1,0 +1,42 @@
+services:
+  framepack:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: ${UID}
+        GID: ${GID}
+        MAX_JOBS: ${MAX_JOBS}
+    image: framepack-sage-cu128:latest
+    container_name: framepack
+    ports:
+      - "7860:7860"
+    volumes:
+      - hf_models:/app/hf_download
+      - ./outputs:/app/outputs
+      - ./models:/app/models
+    environment:
+      - UID=${UID}
+      - GID=${GID}
+      - HF_HOME=/app/hf_download
+      - CLI_ARGS=--share --server 0.0.0.0
+    env_file:
+      - .env
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+volumes:
+  hf_models:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${HF_MODELS_PATH}

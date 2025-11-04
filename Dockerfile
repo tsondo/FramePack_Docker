@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     USER=appuser \
     MAX_JOBS=$MAX_JOBS \
     HF_HOME=/app/hf_download \
-    CLI_ARGS="--share --server 0.0.0.0"
+    CLI_ARGS="--server 0.0.0.0"
 
 # Layer 1: System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \

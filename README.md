@@ -42,3 +42,9 @@ This project does not add new features to FramePack. It simply provides a clean,
 
 - GETTING_STARTED.md — plain‑language intro for Docker/FramePack beginners
 - HOWTO.md — step‑by‑step WSL + Docker + NVIDIA setup guide
+⚠️ Note on .env changes:
+If you edit your .env file after the container is already running, you need to recreate the container for the new values to apply. A simple `docker compose restart` is not enough. Use:
+
+    docker compose up -d --force-recreate
+
+This will restart the service with the updated environment variables.

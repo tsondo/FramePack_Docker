@@ -8,7 +8,7 @@
 # 🎞️ FramePack-Docker
 
 A reproducible Docker setup for running vanilla FramePack with GPU acceleration and persistent storage.
-For setup help, see GETTING_STARTED.md and HOWTO.md.
+For setup help, see [GETTING_STARTED.md](GETTING_STARTED.md) and [HOWTO.md](HOWTO.md).
 
 ---
 
@@ -21,6 +21,11 @@ For setup help, see GETTING_STARTED.md and HOWTO.md.
     docker compose up
 
 Then open http://localhost:7860
+
+⚠️ Note on .env changes:  
+If you edit your `.env` file after the container is already running, you need to recreate the container for the new values to apply. A simple `docker compose restart` is not enough. Use:
+
+    docker compose up -d --force-recreate
 
 ---
 
@@ -40,12 +45,5 @@ This project does not add new features to FramePack. It simply provides a clean,
 
 ## 📖 Documentation
 
-- GETTING_STARTED.md — plain‑language intro for Docker/FramePack beginners
-- HOWTO.md — step‑by‑step WSL + Docker + NVIDIA setup guide
-
-⚠️ Note on .env changes:
-If you edit your .env file after the container is already running, you need to recreate the container for the new values to apply. A simple `docker compose restart` is not enough. Use:
-
-    docker compose up -d --force-recreate
-
-This will restart the service with the updated environment variables.
+- [GETTING_STARTED.md](GETTING_STARTED.md) — plain‑language intro for Docker/FramePack beginners
+- [HOWTO.md](HOWTO.md) — step‑by‑step WSL + Docker + NVIDIA setup guide

@@ -5,14 +5,6 @@
 
 ---
 
-📖 **New to WSL/Docker on Windows?**  
-See the [HOWTO guide](HOWTO.md) for step‑by‑step instructions on installing Docker inside WSL (Ubuntu 22.04) before using this project.
-
-📘 **New to Docker or FramePack in general?**  
-Check out the [GETTING_STARTED.md](GETTING_STARTED.md) guide for a plain‑language introduction: what Docker is, what FramePack does, what’s persistent vs. ephemeral in this build, and how to add your first models.
-
----
-
 # 🎞️ FramePack-Docker
 
 A reproducible Docker setup for running vanilla FramePack with GPU acceleration and persistent storage.
@@ -21,14 +13,22 @@ A reproducible Docker setup for running vanilla FramePack with GPU acceleration 
 
 ## 🚀 Quick Start
 
+```bash
 git clone https://github.com/tsondo/FramePack_Docker.git
 cd FramePack_Docker
 bash setup.sh
 docker compose up
+```
+---
 
-Then open http://localhost:7860
+📖 **New to WSL/Docker on Windows?**  
+See the [HOWTO guide](HOWTO.md) for step‑by‑step instructions on installing Docker inside WSL (Ubuntu 22.04) before using this project.
+
+📘 **New to Docker or FramePack in general?**  
+Check out the [GETTING_STARTED.md](GETTING_STARTED.md) guide for a plain‑language introduction: what Docker is, what FramePack does, what’s persistent vs. ephemeral in this build, and how to add your first models.
 
 ---
+
 
 ## 📂 Persistent Folders
 

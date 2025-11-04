@@ -38,13 +38,6 @@ Check out the [GETTING_STARTED.md](GETTING_STARTED.md) guide for a plain‑langu
 
 ---
 
-## 📖 Documentation
-
-- GETTING_STARTED.md — plain‑language intro for Docker/FramePack beginners
-- HOWTO.md — step‑by‑step WSL + Docker + NVIDIA setup guide
-
----
-
 ## 📌 Scope
 
 This project does not add new features to FramePack. It simply provides a clean, reproducible Docker environment. Future plans may include optional integration with A1111 for text‑to‑image and Lora support, but today this is vanilla FramePack in Docker.

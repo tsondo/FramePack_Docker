@@ -14,10 +14,10 @@ For setup help, see GETTING_STARTED.md and HOWTO.md.
 
 ## 🚀 Quick Start
 
-git clone https://github.com/tsondo/FramePack_Docker.git
-cd FramePack_Docker
-bash setup.sh
-docker compose up
+    git clone https://github.com/tsondo/FramePack_Docker.git
+    cd FramePack_Docker
+    bash setup.sh
+    docker compose up
 
 Then open http://localhost:7860
 
